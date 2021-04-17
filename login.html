@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		body{
+			background-color: black;
+			margin:0px;
+			padding:0px;
+			color:white;
+		}
+		#one{
+			height: 300px;
+			width: 300px;
+			background-color: black;
+			margin-left: 560px;
+			margin-top: 180px;
+			border-top:transparent;
+			border-right:transparent;
+			border-bottom:transparent;
+			border-left:1px solid #03e9f4;
+		}
+		input[type="text"]{
+			width: 300px;
+			border-top:transparent;
+			border-right:transparent;
+			border-bottom:transparent;
+			border-left:1px solid #03e9f4;
+			background-color: black;
+			padding:10px 0px 10px 0px;
+			color:white;
+		}
+		input[type="password"]{
+			width: 300px;
+			border-top:transparent;
+			border-right:transparent;
+			border-bottom:transparent;
+			border-left:1px solid #03e9f4;
+			background-color: black;
+			padding:10px 0px 10px 0px;
+			color:white;
+		}
+		::placeholder{
+			padding-left: 20px;
+			letter-spacing: 0.5px;
+			font-size: 15px;
+		}
+	</style>
+	<title></title>
+</head>
+<body>
+	<div id="one">
+		<h1 style="color:white;margin-left: 20px;"><span style="color:#03e9f4">Login</span></h1>
+
+		<form method="get" action="/login" style="margin-left: 30px;">
+			<br><br>
+			<input type="text" name="signupemail" placeholder="Email addresss">
+			<br><br>
+			<input type="password" name="signuppswd" placeholder="Password">
+			<br><br><br>
+			<button style="color:white;width: 300px;border: 1px solid #03e9f4;background-color: black;padding: 10px 0px 10px 0px;cursor: pointer;">Login</button>
+		</form>
+		<br>
+	</div>
+</body>
+</html>

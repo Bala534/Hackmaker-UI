@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+  <style type="text/css">
+    body{
+      background-color: black;
+      background-image: url("https://www.pixelandparcel.com/wp-content/uploads/2017/03/footer-background.jpg");
+      color:white;
+      font-family: 'Roboto', sans-serif;
+      margin: 0px;
+      padding: 0px;
+    }
+    #left{
+      margin-left: 0px;
+      word-spacing: 1px;
+      margin-top: 150px;
+    }
+    #right{
+      margin-top: 150px;
+    }
+    #b1{
+      width: 150px;
+      color:white;
+      padding:10px 10px 10px 10px;
+      border: 1px solid #236475;
+      float: right;
+      background:transparent;
+      transition-property: background-color;
+      transition-duration: 1s;
+      /*margin-top: -60px;*/
+      cursor: pointer;
+      font-size: 13px;
+    }
+    #b1:hover{
+      background-color: #236475;
+    }
+    #bod{
+      word-spacing: 2px;
+      color:white;
+        opacity:0.5;
+    }
+  </style>
+  <title></title>
+</head>
+<body>
+  <div class="row">
+    <div id="left" class="col-6">
+      <h1>The Team's <span style="color:#1778F2">Spaam</span></h1>
+      <h1>HR Managment Website</h1>
+      <br>
+      <p id="bod"></p>
+      <br>
+    </div>
+
+    <div id="right" class="col-6">
+      <a href="/salaryissue"><button id="b1">Salary issue</button></a>
+      <br><br><br><br>
+      <a href="/harassmentissue"><button id="b1">Harassment issue</button></a>
+      <br><br><br><br>
+      <a href="/resignationissue"><button id="b1">Resignation issue</button></a>
+      <br><br><br><br>
+      <a href="/reimbursment"><button id="b1">Reimbursment</button></a>
+      <br><br><br><br>
+      <a href="/"><button id="b1">Logout</button></a> 
+    </div>
+  </div>
+</body>
+<script type="text/javascript">
+  var story = "A website used to display a huge set of.issues recieved from employees including certain.issues like salaryissues,resignationissue.harassmentissue ";
+    var br = "<br>";
+    var body = document.getElementById("bod");
+    setInterval(add,80);
+    var i =0;
+    function add(){
+    if(story[i]=="."){
+      bod.innerHTML += br;
+      i++;
+    }
+    if(i<story.length){
+      bod.innerHTML+=story[i];
+      i++
+    }
+  }
+</script>
+</html>

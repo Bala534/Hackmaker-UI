@@ -1,0 +1,26 @@
+{
+  "name": "final_ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ui.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/19pa1a0548/FINAL_UI.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/19pa1a0548/FINAL_UI/issues"
+  },
+  "homepage": "https://github.com/19pa1a0548/FINAL_UI#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "method-override": "^3.0.0",
+    "mongojs": "^3.1.0",
+    "sess": "^0.1.4"
+  }
+}
