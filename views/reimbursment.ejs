@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<style type="text/css">
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background: linear-gradient(45deg, #49a09d, #5f2c82);
+  font-family: sans-serif;
+  font-weight: 100;
+}
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+table {
+  /*width: 800px;*/
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+th,
+td {
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+th {
+  text-align: left;
+}
+thead th {
+  background-color: #55608f;
+}
+tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+tbody td {
+  position: relative;
+}
+tbody td:hover:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -9999px;
+  bottom: -9999px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -1;
+}
+a{
+  text-decoration: none;
+  color:white;
+}
+</style>
+
+<body>
+	<div class="container">
+	<table>
+		<thead>
+			<tr>
+				<th style="color:#03e9f4;">Id</th>
+				<th colspan="3" scope="colgroup" style="color:#03e9f4;">Onsight</th>
+				<th colspan="2" scope="colgroup" style="color:#03e9f4;">BCP</th>
+				<th colspan="2" scope="colgroup" style="color:#03e9f4;">Transfertravel</th>
+				<th colspan="3" scope="colgroup" style="color:#03e9f4;">Totalexpenses</th>
+			</tr>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Project</th>
+        <th scope="col">date_travel</th>
+        <th scope="col">total_expenses</th>
+        <th scope="col">Project</th>
+        <th scope="col">total_expenses</th>
+        <th scope="col">transfer_date</th>
+        <th scope="col">total_expenses</th>
+        <th scope="col">Purpose</th>
+        <th scope="col">Project</th>
+        <th scope="col">total_expenses</th>
+      </tr>
+		</thead>
+		<tbody>
+      
+			<% for(var i=0; i < data.length; i++) { %>
+   			<tr id="tab">
+     		<td><%= data[i].id %></td>
+
+     		<td><%= data[i].onsite.project %></td>
+     		<td><%= data[i].onsite.date_travel %></td>
+        <td><%= data[i].onsite.total_expenses %></td>
+
+        <td><%= data[i].bcp.project %></td>
+        <td><%= data[i].bcp.total_expenses %></td>
+
+        <td><%= data[i].transfertravel.transfer_date %></td>
+        <td><%= data[i].transfertravel.total_expenses %></td>
+
+        <td><%= data[i].other.purpose %></td>
+        <td><%= data[i].other.project %></td>
+        <td><%= data[i].other.total_expenses %></td>
+
+   			</tr>
+			<% } %>		
+		</tbody>
+	</table>
+  </div>
+</body>
+</html>

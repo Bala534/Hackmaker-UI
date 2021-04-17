@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<style type="text/css">
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background: linear-gradient(45deg, #49a09d, #5f2c82);
+  font-family: sans-serif;
+  font-weight: 100;
+}
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+table {
+  width: 800px;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+th,
+td {
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+th {
+  text-align: left;
+}
+thead th {
+  background-color: #55608f;
+}
+tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+tbody td {
+  position: relative;
+}
+tbody td:hover:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -9999px;
+  bottom: -9999px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -1;
+}
+a{
+  text-decoration: none;
+  color:white;
+}
+</style>
+
+<body>
+	<div class="container">
+  <table>
+    <thead>
+      <tr>
+        <th style="color:#03e9f4;">Id</th>
+        <th style="color:#03e9f4;">Reason</th>
+        <th style="color:#03e9f4;">Negotiations</th>
+        <th style="color:#03e9f4;">Contact</th>
+        <th style="color:#03e9f4;"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for(var i=0; i < data.length; i++) { %>
+        <tr id="tab">
+        <td><%= data[i].id %></td>
+        <td><%= data[i].msg %></td>
+        <td><%= data[i].purpose %></td>
+        <td id="one"><a href="mailto:19pa1a0534@vishnu.edu.in">contact<i class="fa fa-envelope" style="font-size:18px;margin-left: 5px;"></i></a></td>
+        <td><a href="/resignpurpose/<%= data[i].purpose %>">
+          <i class="fa fa-trash-o" style="font-size:24px;color:white;"></i>
+        </a></td>
+        </tr>
+      <% } %>   
+    </tbody>
+  </table>
+  </div>
+</body>
+</html>
